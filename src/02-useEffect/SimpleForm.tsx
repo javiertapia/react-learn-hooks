@@ -8,7 +8,7 @@ export function SimpleForm () {
     })
 
     const {username, email} = formState
-    const onInputChange = ({target}) => {
+    const onInputChange = ({target}: any) => {
         const {name, value} = target
         setFormState({
             ...formState,
