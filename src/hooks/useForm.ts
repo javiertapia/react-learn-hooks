@@ -12,11 +12,16 @@ export function useForm (initialForm = {}): any {
         })
     }
 
+    const onResetForm = () => {
+        setFormState(initialForm)
+    }
+
     return {
         // Se desestructura el objeto para enviar sus propiedades
         ...formState, 
         formState,
         onInputChange,
+        onResetForm,
     }
 
 }
